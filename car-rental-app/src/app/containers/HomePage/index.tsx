@@ -9,7 +9,7 @@ const PageContainer = styled.div`
         w-full
         h-full
         items-center
-        over-x-hidden
+        overflow-x-hidden
     `}
 `;
 
