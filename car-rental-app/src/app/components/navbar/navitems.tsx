@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Slide as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
 import { SCREENS } from "../responsive";
+import menuStyle from "./menuStyle";
 
 const ListContainer = styled.ul`
     ${tw`
@@ -13,7 +14,7 @@ const ListContainer = styled.ul`
 `
 const NavItem = styled.li`
     ${tw`
-        text-xs
+        text-sm
         md:text-base
         text-black
         font-medium
@@ -32,7 +33,7 @@ export function NavItems(){
 
     if (isMobile)
         return (
-            <Menu>
+            <Menu right styles={menuStyle}>
                 <ListContainer>
                     <NavItem>
                         <a href="#">Home</a>
