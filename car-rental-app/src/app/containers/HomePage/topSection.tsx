@@ -48,10 +48,20 @@ const Slogan = styled.h1`
         sm:leading-snug 
         lg:leading-normal 
         xl:leading-relaxed 
-   `} 
+   `}; 
 `;
 
-const Description = styled.p
+const Description = styled.p`
+    ${tw`
+        text-xs 
+        lg:text-sm
+        xl:text-lg
+        sm:max-h-full 
+        overflow-hidden
+        max-h-12 
+        text-gray-800
+    `};
+`;
 
 export function TopSection() {
 
