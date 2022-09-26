@@ -26,7 +26,7 @@ export default {
       top: "0px",
     },
     bmMenu: {
-      background: "#F8F8FF",
+      background: "#52527a",
       padding: "2.5em 1.5em 0",
       fontSize: "1.15em",
     },
