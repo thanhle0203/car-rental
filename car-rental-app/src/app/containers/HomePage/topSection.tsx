@@ -138,9 +138,15 @@ const StandaloneCar = styled.div`
         right: -13em;
         top: -9em;
     }
-
-
 `;
+
+const ButtonsContainer = styled.div`
+    ${tw`
+        flex 
+        flex-wrap
+        mt-4
+    `}
+`
 
 export function TopSection() {
     return <TopSectionContainer>
@@ -151,8 +157,11 @@ export function TopSection() {
                 the best price for you and contribute your responsibility 
                 in protecting our environment. 
             </Description>
-            <Button theme="filled" text="Book Your Ride" />
-            <Button theme="filled" text="Sell Your Car" />
+            <ButtonsContainer>
+                <Button theme="filled" text="Book Your Ride" />
+                <Button theme="filled" text="Sell Your Car" />
+            </ButtonsContainer>
+            
         </LeftContainer>
         
         <RightContainer>
