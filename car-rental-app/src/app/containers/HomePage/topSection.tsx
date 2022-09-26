@@ -5,6 +5,7 @@ import tw from "twin.macro";
 import ModelSTeslaImg from "../../../assets/images/model-S-Tesla.png";
 import BlobImg from "../../../assets/images/blob.png";
 import { SCREENS } from "../../components/responsive";
+import { Button } from "../../components/button";
 
 const TopSectionContainer = styled.div`
     min-height: 600px;
@@ -150,6 +151,8 @@ export function TopSection() {
                 the best price for you and contribute your responsibility 
                 in protecting our environment. 
             </Description>
+            <Button theme="filled" text="Book Your Ride" />
+            <Button theme="filled" text="Sell Your Car" />
         </LeftContainer>
         
         <RightContainer>
