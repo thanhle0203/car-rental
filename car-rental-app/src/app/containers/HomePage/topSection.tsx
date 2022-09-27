@@ -158,7 +158,7 @@ export function TopSection() {
                 in protecting our environment. 
             </Description>
             <ButtonsContainer>
-                <Button theme="filled" text="Book Your Ride" />
+                <Button theme="outlined" text="Book Your Ride" />
                 <Button theme="filled" text="Sell Your Car" />
             </ButtonsContainer>
             
