@@ -66,6 +66,15 @@ export function BookCard() {
             <Icon>
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
+            <Name>Pick Up Date</Name>
         </ItemContainer>
+
+        <ItemContainer>
+            <Icon>
+                <FontAwesomeIcon icon={faCalendarAlt} />
+            </Icon>
+            <Name>Return Date</Name>
+        </ItemContainer>
+
     </CardContainer>
 }
