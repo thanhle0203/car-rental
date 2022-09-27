@@ -1,4 +1,6 @@
+import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from "styled-components";
 import tw from "twin.macro";
 
@@ -20,7 +22,50 @@ const CardContainer = styled.div`
     `};
 `;
 
+const ItemContainer = styled.div`
+    ${tw`
+        flex
+    `};
+`;
+
+const Icon = styled.span`
+    ${tw`
+        text-red-500
+        fill-current 
+        text-xs 
+        md:text-base 
+        mr-1 
+        md:mr-3 
+
+    `};
+`;
+
+const Name = styled.span`
+    ${tw`
+        text-gray-600 
+        text-xs 
+        md:text-sm 
+    `};
+`;
+
+const LineSeperator = styled.span`
+    width: 2px;
+    height: 45%;
+    ${tw`
+        bg-gray-300 
+        mr-2 
+        ml-2 
+        md:mr-5 
+        md:ml-5
+    `};
+`;
 
 export function BookCard() {
-
+    return <CardContainer>
+        <ItemContainer>
+            <Icon>
+                <FontAwesomeIcon icon={faCalendarAlt} />
+            </Icon>
+        </ItemContainer>
+    </CardContainer>
 }
