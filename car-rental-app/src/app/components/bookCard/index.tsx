@@ -3,6 +3,8 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from "styled-components";
 import tw from "twin.macro";
+import { Button } from "../button";
+import { Marginer } from "../marginer"
 
 const CardContainer = styled.div`
     ${tw`
@@ -25,6 +27,7 @@ const CardContainer = styled.div`
 const ItemContainer = styled.div`
     ${tw`
         flex
+        mr-4
     `};
 `;
 
@@ -75,6 +78,8 @@ export function BookCard() {
             </Icon>
             <Name>Return Date</Name>
         </ItemContainer>
+        <Marginer direction="horizontal" margin="2em" />
+        <Button theme="outlined" text="Book Your Ride" />
 
     </CardContainer>
 }

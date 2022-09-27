@@ -28,3 +28,9 @@ function Marginer(props: IMarginerProps) {
     else 
         return <VerticalMargin {...props} />;
 }
+
+Marginer.defaultProps = {
+    direction: "horizontal",
+};
+
+export { Marginer };
