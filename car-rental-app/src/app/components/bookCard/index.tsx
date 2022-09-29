@@ -7,6 +7,8 @@ import { Button } from "../button";
 import { Marginer } from "../marginer"
 
 const CardContainer = styled.div`
+    min-height: 4.3em;
+    box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
     ${tw`
         flex
         justify-center
@@ -27,7 +29,6 @@ const CardContainer = styled.div`
 const ItemContainer = styled.div`
     ${tw`
         flex
-        mr-4
     `};
 `;
 
@@ -71,7 +72,7 @@ export function BookCard() {
             </Icon>
             <Name>Pick Up Date</Name>
         </ItemContainer>
-
+        <LineSeperator />
         <ItemContainer>
             <Icon>
                 <FontAwesomeIcon icon={faCalendarAlt} />
