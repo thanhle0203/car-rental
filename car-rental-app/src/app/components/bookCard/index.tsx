@@ -79,9 +79,19 @@ const DateCalendar = styled(Calendar)`
 export function BookCard() {
     const [startDate, setStartDate] = useState(new Date());
     const [isStartCalendarOpen, setStartCalendarOpen] = useState(false);
+    const [returnDate, setReturnDate] = useState(new Date());
+    const [isReturnCalendarOpen, setReturnCalendarOpen] = useState(false);
+
+    console.log("Value: ", startDate);
 
     const toggleStartDateCalendar = () => {
         setStartCalendarOpen(!isStartCalendarOpen);
+        if (isReturnCalendarOpen) setReturnCalendarOpen(false);
+    }
+
+    const toggleReturnDateCalendar = () => {
+        setReturnCalendarOpen(!isReturnCalendarOpen);
+        if (isStartCalendarOpen) setStartCalendarOpen(false);
     }
 
     return <CardContainer>
@@ -90,15 +100,20 @@ export function BookCard() {
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
             <Name onClick={toggleStartDateCalendar}>Pick Up Date</Name>
-            {isStartCalendarOpen && <DateCalendar value={startDate} onChange={setStartDate} />}
-            <DateCalendar />
+            {isStartCalendarOpen && (
+             <DateCalendar value={startDate} onChange={setStartDate} />
+            )}
+
         </ItemContainer>
         <LineSeperator />
         <ItemContainer>
             <Icon>
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
-            <Name>Return Date</Name>
+            <Name onClick={toggleReturnDateCalendar}>Return Date</Name>
+            {isReturnCalendarOpen && (
+             <DateCalendar value={returnDate} onChange={setReturnDate} />
+            )}
         </ItemContainer>
         <Marginer direction="horizontal" margin="2em" />
         <Button theme="outlined" text="Book Your Ride" />
