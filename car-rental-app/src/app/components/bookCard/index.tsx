@@ -5,6 +5,10 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Button } from "../button";
 import { Marginer } from "../marginer"
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
+
+
 
 const CardContainer = styled.div`
     min-height: 4.3em;
@@ -28,7 +32,7 @@ const CardContainer = styled.div`
 
 const ItemContainer = styled.div`
     ${tw`
-        flex
+        flex relative
     `};
 `;
 
@@ -64,6 +68,12 @@ const LineSeperator = styled.span`
     `};
 `;
 
+const DateCalendar = styled(Calendar)`
+    position: absolute;
+    top: 1em;
+    left: 0;
+`;
+
 export function BookCard() {
     return <CardContainer>
         <ItemContainer>
@@ -71,6 +81,7 @@ export function BookCard() {
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
             <Name>Pick Up Date</Name>
+            <DateCalendar />
         </ItemContainer>
         <LineSeperator />
         <ItemContainer>
