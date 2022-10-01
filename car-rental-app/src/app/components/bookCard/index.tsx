@@ -7,8 +7,12 @@ import { Button } from "../button";
 import { Marginer } from "../marginer"
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
+// inside JSX or TSX
+<FontAwesomeIcon icon={faPlus}/>
 
 const CardContainer = styled.div`
     min-height: 4.3em;
@@ -44,8 +48,18 @@ const Icon = styled.span`
         md:text-base 
         mr-1 
         md:mr-3 
-
     `};
+`;
+
+const SmallIcon = styled.span`
+   ${tw`
+        text-gray-700
+        fill-current
+        text-xs
+        md:text-base
+        md-1 
+
+   `}; 
 `;
 
 const Name = styled.span`
@@ -100,6 +114,9 @@ export function BookCard() {
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
             <Name onClick={toggleStartDateCalendar}>Pick Up Date</Name>
+            <SmallIcon>
+                <FontAwesomeIcon  icon={isStartCalendarOpen ? faCaretUp : faCaretDown} />
+            </SmallIcon>
             {isStartCalendarOpen && (
              <DateCalendar value={startDate} onChange={setStartDate} />
             )}
