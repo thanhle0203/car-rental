@@ -9,10 +9,7 @@ import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-// inside JSX or TSX
-<FontAwesomeIcon icon={faPlus}/>
 
 const CardContainer = styled.div`
     min-height: 4.3em;
@@ -128,6 +125,9 @@ export function BookCard() {
                 <FontAwesomeIcon icon={faCalendarAlt} />
             </Icon>
             <Name onClick={toggleReturnDateCalendar}>Return Date</Name>
+            <SmallIcon>
+                <FontAwesomeIcon  icon={isStartCalendarOpen ? faCaretUp : faCaretDown} />
+            </SmallIcon>
             {isReturnCalendarOpen && (
              <DateCalendar value={returnDate} onChange={setReturnDate} />
             )}

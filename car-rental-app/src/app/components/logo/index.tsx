@@ -36,7 +36,7 @@ const Image = styled.div`
 export function Logo() {
     return <LogoContainer>
         <Image>
-            <img src={CarLogoImg} />
+            <img src={CarLogoImg} alt="" />
         </Image>
         <LogoText>Yourcar</LogoText>
     </LogoContainer>
